@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Rofina_biModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CuentaCorriente_Descarga">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Alloc_Nmbr" Type="varchar" MaxLength="100" />
+          <Property Name="Amount" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="Amount_Long" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="Amt_Doccur" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="Amt_Doccur_Long" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="Bill_Doc" Type="varchar" MaxLength="100" />
+          <Property Name="Bline_Date" Type="datetime" />
+          <Property Name="Bus_Area" Type="varchar" MaxLength="50" />
+          <Property Name="Clr_Doc_No" Type="varchar" MaxLength="50" />
+          <Property Name="Comp_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Currency" Type="varchar" MaxLength="50" />
+          <Property Name="Customer" Type="varchar" MaxLength="30" />
+          <Property Name="Db_Cr_Ind" Type="varchar" MaxLength="30" />
+          <Property Name="Doc_Date" Type="datetime" />
+          <Property Name="Doc_no" Type="varchar" MaxLength="50" />
+          <Property Name="Doc_Type" Type="varchar" MaxLength="50" />
+          <Property Name="Dsct_Days1" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Dsct_Days2" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Fisc_Year" Type="varchar" MaxLength="50" />
+          <Property Name="Fis_Period" Type="varchar" MaxLength="50" />
+          <Property Name="Inv_Item" Type="varchar" MaxLength="50" />
+          <Property Name="Inv_Ref" Type="varchar" MaxLength="50" />
+          <Property Name="Inv_Year" Type="varchar" MaxLength="50" />
+          <Property Name="Item_Text" Type="varchar" MaxLength="150" />
+          <Property Name="Lc_Amount" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="Lc_Amount_long" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="Loc_Currcy" Type="varchar" MaxLength="50" />
+          <Property Name="Netterms" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Net_Amount" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Net_Amount_Long" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Pmnttrms" Type="varchar" MaxLength="50" />
+          <Property Name="Pstng_Date" Type="datetime" />
+          <Property Name="Ref_Doc" Type="varchar" MaxLength="50" />
+          <Property Name="Ref_Doc_No" Type="varchar" MaxLength="50" />
+          <Property Name="Ref_Doc_No_Long" Type="varchar" MaxLength="50" />
+          <Property Name="Ref_Key_2" Type="varchar" MaxLength="150" />
+          <Property Name="Sp_Gl_Ind" Type="varchar" MaxLength="150" />
+          <Property Name="Tax_Code" Type="varchar" MaxLength="50" />
+          <Property Name="T_Currency" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Rofina_biModelStoreContainer">
+          <EntitySet Name="CuentaCorriente_Descarga" EntityType="Self.CuentaCorriente_Descarga" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Rofina_biModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CuentaCorriente_Descarga">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Alloc_Nmbr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Amount_Long" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Amt_Doccur" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Amt_Doccur_Long" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Bill_Doc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Bline_Date" Type="DateTime" Precision="3" />
+          <Property Name="Bus_Area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Clr_Doc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Comp_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Customer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Db_Cr_Ind" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Doc_Date" Type="DateTime" Precision="3" />
+          <Property Name="Doc_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Doc_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Dsct_Days1" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Dsct_Days2" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Fisc_Year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fis_Period" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Inv_Item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Inv_Ref" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Inv_Year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Text" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Lc_Amount" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Lc_Amount_long" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Loc_Currcy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Netterms" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Net_Amount" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Net_Amount_Long" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Pmnttrms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pstng_Date" Type="DateTime" Precision="3" />
+          <Property Name="Ref_Doc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ref_Doc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ref_Doc_No_Long" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ref_Key_2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Sp_Gl_Ind" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Tax_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Rofina_biEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CuentaCorriente_Descarga" EntityType="Self.CuentaCorriente_Descarga" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Rofina_biModelStoreContainer" CdmEntityContainer="Rofina_biEntities">
+          <EntitySetMapping Name="CuentaCorriente_Descarga">
+            <EntityTypeMapping TypeName="Rofina_biModel.CuentaCorriente_Descarga">
+              <MappingFragment StoreEntitySet="CuentaCorriente_Descarga">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Alloc_Nmbr" ColumnName="Alloc_Nmbr" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Amount_Long" ColumnName="Amount_Long" />
+                <ScalarProperty Name="Amt_Doccur" ColumnName="Amt_Doccur" />
+                <ScalarProperty Name="Amt_Doccur_Long" ColumnName="Amt_Doccur_Long" />
+                <ScalarProperty Name="Bill_Doc" ColumnName="Bill_Doc" />
+                <ScalarProperty Name="Bline_Date" ColumnName="Bline_Date" />
+                <ScalarProperty Name="Bus_Area" ColumnName="Bus_Area" />
+                <ScalarProperty Name="Clr_Doc_No" ColumnName="Clr_Doc_No" />
+                <ScalarProperty Name="Comp_Code" ColumnName="Comp_Code" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="Db_Cr_Ind" ColumnName="Db_Cr_Ind" />
+                <ScalarProperty Name="Doc_Date" ColumnName="Doc_Date" />
+                <ScalarProperty Name="Doc_no" ColumnName="Doc_no" />
+                <ScalarProperty Name="Doc_Type" ColumnName="Doc_Type" />
+                <ScalarProperty Name="Dsct_Days1" ColumnName="Dsct_Days1" />
+                <ScalarProperty Name="Dsct_Days2" ColumnName="Dsct_Days2" />
+                <ScalarProperty Name="Fisc_Year" ColumnName="Fisc_Year" />
+                <ScalarProperty Name="Fis_Period" ColumnName="Fis_Period" />
+                <ScalarProperty Name="Inv_Item" ColumnName="Inv_Item" />
+                <ScalarProperty Name="Inv_Ref" ColumnName="Inv_Ref" />
+                <ScalarProperty Name="Inv_Year" ColumnName="Inv_Year" />
+                <ScalarProperty Name="Item_Text" ColumnName="Item_Text" />
+                <ScalarProperty Name="Lc_Amount" ColumnName="Lc_Amount" />
+                <ScalarProperty Name="Lc_Amount_long" ColumnName="Lc_Amount_long" />
+                <ScalarProperty Name="Loc_Currcy" ColumnName="Loc_Currcy" />
+                <ScalarProperty Name="Netterms" ColumnName="Netterms" />
+                <ScalarProperty Name="Net_Amount" ColumnName="Net_Amount" />
+                <ScalarProperty Name="Net_Amount_Long" ColumnName="Net_Amount_Long" />
+                <ScalarProperty Name="Pmnttrms" ColumnName="Pmnttrms" />
+                <ScalarProperty Name="Pstng_Date" ColumnName="Pstng_Date" />
+                <ScalarProperty Name="Ref_Doc" ColumnName="Ref_Doc" />
+                <ScalarProperty Name="Ref_Doc_No" ColumnName="Ref_Doc_No" />
+                <ScalarProperty Name="Ref_Doc_No_Long" ColumnName="Ref_Doc_No_Long" />
+                <ScalarProperty Name="Ref_Key_2" ColumnName="Ref_Key_2" />
+                <ScalarProperty Name="Sp_Gl_Ind" ColumnName="Sp_Gl_Ind" />
+                <ScalarProperty Name="Tax_Code" ColumnName="Tax_Code" />
+                <ScalarProperty Name="T_Currency" ColumnName="T_Currency" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

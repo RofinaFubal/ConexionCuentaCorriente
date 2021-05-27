@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="urn:sap-com:document:sap:rfc:functions" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl" />
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="BN__Z_ROL_02_WS_GET_ACC_OPENITEMS">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+        <wsp:All xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication />
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15 />
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict />
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+        <wsp:All xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication />
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15 />
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict />
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BN__Z_ROL_02_WS_GET_ACC_OPENITEMS_soap12">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+        <wsp:All xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication />
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15 />
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict />
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+        <wsp:All xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+          <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+            <wsp:Policy>
+              <sp:TransportToken>
+                <wsp:Policy>
+                  <sp:HttpsToken>
+                    <wsp:Policy>
+                      <sp:HttpBasicAuthentication />
+                    </wsp:Policy>
+                  </sp:HttpsToken>
+                </wsp:Policy>
+              </sp:TransportToken>
+              <sp:AlgorithmSuite>
+                <wsp:Policy>
+                  <sp:Basic128Rsa15 />
+                </wsp:Policy>
+              </sp:AlgorithmSuite>
+              <sp:Layout>
+                <wsp:Policy>
+                  <sp:Strict />
+                </wsp:Policy>
+              </sp:Layout>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:All>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF__Z_ROL_02_WS_GET_ACC_OPENITEMS">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+          <sapsession:enableSession>false</sapsession:enableSession>
+        </sapsession:Session>
+        <sapcentraladmin:CentralAdministration xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/" wsp:Optional="true">
+          <sapcentraladmin:BusinessApplicationID>000D3A7AEAED1EEAB7AE882D9DEEB684</sapcentraladmin:BusinessApplicationID>
+        </sapcentraladmin:CentralAdministration>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__Z_ROL_02_WS_GET_ACC_OPENITEMS">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="RfcException.Message.Number">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char12">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="12" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char16">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="16" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char18">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="18" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char255">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="255" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char35">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="35" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char50">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="cuky5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal23.4">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="23" />
+          <xsd:fractionDigits value="4" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal3.0">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="3" />
+          <xsd:fractionDigits value="0" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal31.8">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="31" />
+          <xsd:fractionDigits value="8" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ZSD02_WS_CLIENTES_RANGES">
+        <xsd:sequence>
+          <xsd:element name="KUNNR_DESDE" type="tns:char10" />
+          <xsd:element name="KUNNR_HASTA" type="tns:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZROL02_WS_ACC_PARTIDAS">
+        <xsd:sequence>
+          <xsd:element name="COMP_CODE" type="tns:char4" />
+          <xsd:element name="CUSTOMER" type="tns:char10" />
+          <xsd:element name="SP_GL_IND" type="tns:char1" />
+          <xsd:element name="CLR_DOC_NO" type="tns:char10" />
+          <xsd:element name="ALLOC_NMBR" type="tns:char18" />
+          <xsd:element name="FISC_YEAR" type="tns:numeric4" />
+          <xsd:element name="DOC_NO" type="tns:char10" />
+          <xsd:element name="PSTNG_DATE" type="tns:date10" />
+          <xsd:element name="DOC_DATE" type="tns:date10" />
+          <xsd:element name="CURRENCY" type="tns:cuky5" />
+          <xsd:element name="LOC_CURRCY" type="tns:cuky5" />
+          <xsd:element name="REF_DOC_NO" type="tns:char16" />
+          <xsd:element name="DOC_TYPE" type="tns:char2" />
+          <xsd:element name="FIS_PERIOD" type="tns:numeric2" />
+          <xsd:element name="DB_CR_IND" type="tns:char1" />
+          <xsd:element name="BUS_AREA" type="tns:char4" />
+          <xsd:element name="TAX_CODE" type="tns:char2" />
+          <xsd:element name="LC_AMOUNT" type="tns:decimal23.4" />
+          <xsd:element name="AMT_DOCCUR" type="tns:decimal23.4" />
+          <xsd:element name="ITEM_TEXT" type="tns:char50" />
+          <xsd:element name="BLINE_DATE" type="tns:date10" />
+          <xsd:element name="PMNTTRMS" type="tns:char4" />
+          <xsd:element name="DSCT_DAYS1" type="tns:decimal3.0" />
+          <xsd:element name="DSCT_DAYS2" type="tns:decimal3.0" />
+          <xsd:element name="NETTERMS" type="tns:decimal3.0" />
+          <xsd:element name="INV_REF" type="tns:char10" />
+          <xsd:element name="INV_YEAR" type="tns:numeric4" />
+          <xsd:element name="INV_ITEM" type="tns:numeric3" />
+          <xsd:element name="REF_KEY_2" type="tns:char12" />
+          <xsd:element name="T_CURRENCY" type="tns:cuky5" />
+          <xsd:element name="AMOUNT" type="tns:decimal23.4" />
+          <xsd:element name="NET_AMOUNT" type="tns:decimal23.4" />
+          <xsd:element name="REF_DOC" type="tns:char10" />
+          <xsd:element name="REF_DOC_NO_LONG" type="tns:char35" />
+          <xsd:element name="BILL_DOC" type="tns:char10" />
+          <xsd:element name="LC_AMOUNT_LONG" type="tns:decimal31.8" />
+          <xsd:element name="AMT_DOCCUR_LONG" type="tns:decimal31.8" />
+          <xsd:element name="AMOUNT_LONG" type="tns:decimal31.8" />
+          <xsd:element name="NET_AMOUNT_LONG" type="tns:decimal31.8" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZROL02_WS_GET_ACC_ERR_E">
+        <xsd:sequence>
+          <xsd:element name="MSGNR" type="tns:char3" />
+          <xsd:element name="ERROR" type="tns:char255" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RfcException.Message">
+        <xsd:sequence>
+          <xsd:element name="ID" type="xsd:string" />
+          <xsd:element name="Number" type="tns:RfcException.Message.Number" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Z_ROL_02_WS_GET_ACC_OPENITEMS.RfcException">
+        <xsd:sequence>
+          <xsd:element name="Name" type="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS.RfcExceptions" />
+          <xsd:element minOccurs="0" name="Text" type="xsd:string" />
+          <xsd:element minOccurs="0" name="Message" type="tns:RfcException.Message" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZSD02_WS_CLIENTES_RANGES_TAB">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZSD02_WS_CLIENTES_RANGES" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZROL02_WS_ACC_PARTIDAS_TAB">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZROL02_WS_ACC_PARTIDAS" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZROL02_WS_GET_ACC_ERR_E_TAB">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZROL02_WS_GET_ACC_ERR_E" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="Z_ROL_02_WS_GET_ACC_OPENITEMS.RfcExceptions">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="ERROR_CLIENTES_VACIO" />
+          <xsd:enumeration value="ERROR_COMPANYCODE" />
+          <xsd:enumeration value="ERROR_IMPORTES" />
+          <xsd:enumeration value="ERROR_RECUPERAR_PARTIDAS" />
+          <xsd:enumeration value="NO_AUTORIZATION" />
+          <xsd:enumeration value="SIN_DATOS" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:element name="Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception" type="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS.RfcException" />
+      <xsd:element name="Z_ROL_02_WS_GET_ACC_OPENITEMS">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="COMPANYCODE" type="tns:char4" />
+            <xsd:element name="I_T_CLIENTES_RANGES" type="tns:ZSD02_WS_CLIENTES_RANGES_TAB" />
+            <xsd:element name="KEYDATE" type="tns:date10" />
+            <xsd:element minOccurs="0" name="NOTEDITEMS" type="tns:char1" />
+            <xsd:element minOccurs="0" name="SECINDEX" type="tns:char1" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Z_ROL_02_WS_GET_ACC_OPENITEMSResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="E_T_ERRORES" type="tns:ZROL02_WS_GET_ACC_ERR_E_TAB" />
+            <xsd:element name="E_T_PARTIDAS" type="tns:ZROL02_WS_ACC_PARTIDAS_TAB" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Z_ROL_02_WS_GET_ACC_OPENITEMS">
+    <wsdl:part name="parameters" element="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS" />
+  </wsdl:message>
+  <wsdl:message name="Z_ROL_02_WS_GET_ACC_OPENITEMSResponse">
+    <wsdl:part name="parameter" element="tns:Z_ROL_02_WS_GET_ACC_OPENITEMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception">
+    <wsdl:part name="Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception" element="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception" />
+  </wsdl:message>
+  <wsdl:portType name="Z_ROL_02_WS_GET_ACC_OPENITEMS">
+    <wsdl:documentation>
+      <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+        <sapdoc:docitem applicationComponent="SD" />
+      </sapdoc:sapdoc>
+    </wsdl:documentation>
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF__Z_ROL_02_WS_GET_ACC_OPENITEMS" />
+    </wsp:Policy>
+    <wsdl:operation name="Z_ROL_02_WS_GET_ACC_OPENITEMS">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__Z_ROL_02_WS_GET_ACC_OPENITEMS" />
+      </wsp:Policy>
+      <wsdl:input message="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS" />
+      <wsdl:output message="tns:Z_ROL_02_WS_GET_ACC_OPENITEMSResponse" />
+      <wsdl:fault name="Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception" message="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Z_ROL_02_WS_GET_ACC_OPENITEMS" type="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__Z_ROL_02_WS_GET_ACC_OPENITEMS" />
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Z_ROL_02_WS_GET_ACC_OPENITEMS">
+      <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:Z_ROL_02_WS_GET_ACC_OPENITEMS:Z_ROL_02_WS_GET_ACC_OPENITEMSRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception">
+        <soap:fault use="literal" name="Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Z_ROL_02_WS_GET_ACC_OPENITEMS_soap12" type="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__Z_ROL_02_WS_GET_ACC_OPENITEMS_soap12" />
+    </wsp:Policy>
+    <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Z_ROL_02_WS_GET_ACC_OPENITEMS">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:rfc:functions:Z_ROL_02_WS_GET_ACC_OPENITEMS:Z_ROL_02_WS_GET_ACC_OPENITEMSRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception">
+        <wsoap12:fault use="literal" name="Z_ROL_02_WS_GET_ACC_OPENITEMS.Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Z_ROL_02_WS_GET_ACC_OPENITEMS">
+    <wsdl:port name="Z_ROL_02_WS_GET_ACC_OPENITEMS" binding="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS">
+      <soap:address location="http://s4rofciqa.rofina.com.ar:8000/sap/bc/srt/rfc/sap/z_rol_02_ws_get_acc_openitems/400/z_rol_02_ws_get_acc_openitems/z_rol_02_ws_get_acc_openitems" />
+    </wsdl:port>
+    <wsdl:port name="Z_ROL_02_WS_GET_ACC_OPENITEMS_soap12" binding="tns:Z_ROL_02_WS_GET_ACC_OPENITEMS_soap12">
+      <wsoap12:address location="http://s4rofciqa.rofina.com.ar:8000/sap/bc/srt/rfc/sap/z_rol_02_ws_get_acc_openitems/400/z_rol_02_ws_get_acc_openitems/z_rol_02_ws_get_acc_openitems" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

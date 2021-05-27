@@ -1,0 +1,4 @@
+﻿1>------ Operación Recompilar todo iniciada: proyecto: BaseDatos, configuración: Debug Any CPU ------
+1>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2081,5): warning MSB3267: La referencia principal "System.Net.Http", que es un ensamblado de .NET Framework, no se pudo resolver en la versión de .NET Framework de destino actual. ".NETFramework,Version=v4.0". Para solucionar este problema, quite la referencia "System.Net.Http" o establezca el destino de la aplicación en una versión de .NET Framework que contenga "System.Net.Http".
+1>  BaseDatos -> C:\Users\fubal\Source\Repos\ConexionCuentaCorriente\BaseDatos\bin\Debug\BaseDatos.dll
+========== Recompilar todo: 1 correctos, 0 incorrectos, 0 omitidos ==========

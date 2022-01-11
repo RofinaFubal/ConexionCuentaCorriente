@@ -21,7 +21,7 @@ namespace CuentaCorriente
             string clave = ConfigurationSettings.AppSettings["Clave"];
             //string url = "http://s4rofciqa.rofina.com.ar:8000/sap/bc/srt/rfc/sap/z_rol_02_ws_get_acc_openitems/400/z_rol_02_ws_get_acc_openitems/z_rol_02_ws_get_acc_openitems";
             string url = ConfigurationSettings.AppSettings["UrlPartidasAbiertas"];
-            url = "http://s4rofciqa.rofina.com.ar:8000/sap/bc/srt/rfc/sap/z_rol_02_ws_get_acc_openitems/400/z_rol_02_ws_get_acc_openitems/z_rol_02_ws_get_acc_openitems";
+            //url = "http://s4rofciqa.rofina.com.ar:8000/sap/bc/srt/rfc/sap/z_rol_02_ws_get_acc_openitems/400/z_rol_02_ws_get_acc_openitems/z_rol_02_ws_get_acc_openitems";
             System.Net.NetworkCredential credenciales = new System.Net.NetworkCredential(usuario, clave);
             openItemsService.Credentials = credenciales;
 

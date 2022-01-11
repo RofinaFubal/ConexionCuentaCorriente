@@ -85,7 +85,7 @@
     </Compile>
     <Compile Include="Cs_CuentaCorrienteDC.cs" />
     <Compile Include="CuentaCorriente_Descarga.cs">
-      <DependentUpon>BusinessIntelligence.tt</DependentUpon>
+      <DependentUpon>BI.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
